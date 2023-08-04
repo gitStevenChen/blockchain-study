@@ -29,8 +29,8 @@
 DEX是一个平台，可以实现代币的交易和直接交换，而不需要中介机构（即中心化交易所）。你不需要经历 "了解你的客户"（KYC）流程的麻烦，也不会受到管辖范围的限制。
 
 
-1、 基于【订单薄】 <链上或链下>： dYdX、Deversifi、Loopring ；类似于CEX的买卖订单，区别在于，在CEXs中，交易的资产被保存在交易所的钱包里，而对于DEXs，交易的资产被保存在用户的钱包里。
-2、 基于【流动性池】： Uniswap、SushiSwap、Curve、 Balancer、 Bancor、 PancakeSwap、 TerraSwap、 0x；用AMM来保证流动性
+1. 基于【订单薄】 <链上或链下>： dYdX、Deversifi、Loopring ；类似于CEX的买卖订单，区别在于，在CEXs中，交易的资产被保存在交易所的钱包里，而对于DEXs，交易的资产被保存在用户的钱包里。
+2. 基于【流动性池】： Uniswap、SushiSwap、Curve、 Balancer、 Bancor、 PancakeSwap、 TerraSwap、 0x；用AMM来保证流动性
 
 ### DEX聚合器
 
