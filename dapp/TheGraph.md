@@ -9,6 +9,8 @@
 APIURL = 'https://api.thegraph.com/subgraphs/name/username/subgraphname' （/username/subgraphname 替换）
 找子图工作室的端点可以去google搜：子图名称 Graphql endpoints
 
+部署到subGraph后会生成query，在playground的右边按钮能找到，这是查询的关键字
+
 参考代码
 ```
 import { createClient, cacheExchange, fetchExchange } from 'urql'
