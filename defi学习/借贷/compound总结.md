@@ -48,3 +48,22 @@ y = k2*(x - p) + (k*p + b)
 其中，k2 表示拐点后的直线的斜率，p 则表示拐点的 x 轴的值。因此，需要初始化的参数有 4 个：b、k、k2、p，分别对应了构造函数中的几个入参：baseRatePerYear、multiplierPerYear、jumpMultiplierPerYear、kink。而几个 PerYear 入参对应的就有几个 PerBlock 变量
 
 存款利率的计算公式则和直线型的一样，没有变化。因为存款利率是随着借款利率而变的，所以斜率其实也跟随着借款利率而变化。
+
+
+## 清算
+
+清算阈值
+
+
+seizeTokens = actualRepayAmount * liquidationIncentive * priceBorrowed / (priceCollateral * exchangeRate)
+
+seizeTokens 即最后得到的抵押资产数量，是 cToken 的数量
+actualRepayAmount 为代还款的实际金额
+liquidationIncentive 是清算激励，该值目前为 1.08，即清算人可获得借款价值 8% 的额外收益
+priceBorrowed 所借资产的当前价格
+priceCollateral 抵押物的标的资产价格
+exchangeRate 兑换率
+
+用户借了 1500 USDC，抵押资产为 cETH。清算人要对这笔借款进行清算时，可代还款金额为 1500*0.5=750 USDC，清算的抵押资产就指定为 cETH。ETH 价格假设为 1990，兑换率为 0.02，那根据公式计算得出清算人可得到的抵押资产数量为 750 * 1.08 * 1 / (1990 * 0.02) = 810 / 39.8 = 20.3517... 即清算人最终可得到 20.3517... 多的 cETH。
+
+
